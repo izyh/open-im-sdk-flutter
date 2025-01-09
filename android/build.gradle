@@ -29,7 +29,7 @@ rootProject.allprojects {
     repositories {
         // 将aar放到libs，本地仓库替换远程仓库
 //        maven { url "$dir/libs" }
-        maven { url 'https://open-im-online.rentsoft.cn:51000/repository/maven2/' }
+        // maven { url 'https://open-im-online.rentsoft.cn:51000/repository/maven2/' }
         google()
         mavenCentral()
     }
