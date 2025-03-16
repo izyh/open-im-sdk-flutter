@@ -1084,6 +1084,12 @@ class RevokedInfo {
   /// Message sender's nickname
   String? sourceMessageSenderNickname;
 
+  /// Message content
+  String? sourceMessageContent;
+
+  /// Message type [MessageType].
+  int? sourceMessageContentType;
+
   /// Conversation type [ConversationType]
   int? sessionType;
 
@@ -1096,6 +1102,8 @@ class RevokedInfo {
     this.sourceMessageSendTime,
     this.sourceMessageSendID,
     this.sourceMessageSenderNickname,
+    this.sourceMessageContent,
+    this.sourceMessageContentType,
     this.sessionType,
   });
 
@@ -1108,6 +1116,8 @@ class RevokedInfo {
     sourceMessageSendTime = json['sourceMessageSendTime'];
     sourceMessageSendID = json['sourceMessageSendID'];
     sourceMessageSenderNickname = json['sourceMessageSenderNickname'];
+    sourceMessageContent = json['sourceMessageContent'];
+    sourceMessageContentType = json['sourceMessageContentType'];
     sessionType = json['sessionType'];
   }
 
@@ -1121,6 +1131,8 @@ class RevokedInfo {
     data['sourceMessageSendTime'] = this.sourceMessageSendTime;
     data['sourceMessageSendID'] = this.sourceMessageSendID;
     data['sourceMessageSenderNickname'] = this.sourceMessageSenderNickname;
+    data['sourceMessageContent'] = this.sourceMessageContent;
+    data['sourceMessageContentType'] = this.sourceMessageContentType;
     data['sessionType'] = this.sessionType;
     return data;
   }
