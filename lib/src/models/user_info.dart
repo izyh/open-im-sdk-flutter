@@ -180,6 +180,9 @@ class FriendInfo {
   /// Remark
   String? remark;
 
+  /// friend User Additional information
+  String? friendUserEx;
+
   /// Additional information
   String? ex;
 
@@ -199,6 +202,7 @@ class FriendInfo {
     this.faceURL,
     this.friendUserID,
     this.remark,
+    this.friendUserEx,
     this.ex,
     this.createTime,
     this.addSource,
@@ -215,6 +219,7 @@ class FriendInfo {
     nickname = json['nickname'];
     faceURL = json['faceURL'];
     friendUserID = json['friendUserID'];
+    friendUserEx = json['friendUserEx'];
     ex = json['ex'];
   }
 
@@ -229,6 +234,7 @@ class FriendInfo {
     data['nickname'] = this.nickname;
     data['faceURL'] = this.faceURL;
     data['friendUserID'] = this.friendUserID;
+    data['friendUserEx'] = this.friendUserEx;
     data['ex'] = this.ex;
     return data;
   }
